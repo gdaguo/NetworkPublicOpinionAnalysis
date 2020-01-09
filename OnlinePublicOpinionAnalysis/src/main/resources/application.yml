@@ -1,0 +1,69 @@
+server:
+  port: 8080
+  tomcat:
+    max-connections: 8192
+
+mybatis:
+  mapper-locations: classpath:/com/ssg/repository/base/*.xml
+  type-aliases-package: com.ssg.entity
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: ssg593707482
+    url: jdbc:mysql://152.136.101.102:3306/patentprocess?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    # 初始化，最小，最大连接数
+    initialSize: 3
+    minidle: 3
+    maxActive: 100
+    # 获取数据库连接等待的超时时间
+    maxWait: 60000
+    # 配置多久进行一次检测，检测需要关闭的空闲连接 单位毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: SELECT 1 FROM dual
+    # 配置监控统计拦截的filters,去掉后，监控界面的sql无法统计
+    filters: stat,wall,log4j
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  mail:
+    host: smtp.163.com #邮件发送服务器的主机，这里采用的是163邮箱来发送邮件
+    username: 13258775236@163.com #发送者邮箱账号
+    password: ls970916 #授权码
+    default-encoding: UTF-8
+    test-connection: false
+    port: 25 #端口号
+    protocol: smtp #邮件发送协议，pop3和imap是邮件接收协议。
+    from: 13258775236@163.com
+  aop:
+    auto: true
+  servlet:
+    multipart:
+      maxFileSize: -1    #文件上传大小限制 -1
+      maxRequestSize: -1
+
+INDEX_CONTENT_REDIS_KEY: INDEX_CONTENT_REDIS_KEY
+
+SECRET: OajPQmUj5mC0UHPHx6DNKjZwoJqblNkomuKG1vXHzlw
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+#文件上传保存的路径
+upload:
+  path: /patentFiles
+  localpath: /home/ubuntu # 手动修改文件夹本地保存路径
+  #/home/ubuntu
+
+suixingpay:
+  swagger2:
+    base-package: com.suixingpay
+    base-path: /**
+    exclude-path: /error
+multipart:
+  enabled: true

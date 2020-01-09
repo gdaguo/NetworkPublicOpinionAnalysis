@@ -1,0 +1,46 @@
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile('mysql:mysql-connector-java:5.1.25')
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'mysql:mysql-connector-java'
+    // https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
+    compile 'org.springframework.boot:spring-boot-starter-aop'
+
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
+
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.6'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+
+    // durid数据库连接池
+    compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.1.10'
+
+    //邮件依赖
+    compile 'org.springframework.boot:spring-boot-starter-mail'
+
+    //Excal依赖
+    compile group: 'org.apache.poi', name: 'poi', version: '4.1.0'
+
+    // redis依赖
+    compile group: 'redis.clients', name: 'jedis', version: '3.0.1'
+
+    compile 'com.suixingpay.starter:suixingpay-starter-async:4.0.1-SNAPSHOT'
+
+    compile 'org.springframework.boot:spring-boot-starter-test'
+
+    compile 'junit:junit:4.13-rc-2'
+
+    implementation 'com.suixingpay.starter:suixingpay-starter-swagger2:4.0.0.RELEASE'
+
+    // jsp实时刷新
+    compile ("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+
+    compile 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+    compile 'jstl:jstl:1.2:sources'
+
+}
